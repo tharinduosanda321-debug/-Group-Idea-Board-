@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaFlow | Group Idea Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-wrapper">
+                <div class="logo">💡</div>
+            </div>
+            <h1>IdeaFlow</h1>
+        </header>
+
+        <div class="input-section">
+            <div class="form-group">
+                <label for="participantSelect">Contributor</label>
+                <select id="participantSelect">
+                    <option value="" disabled selected>Select your name...</option>
+                    <option>Indumini</option>
+                    <option>Nilakshana</option>
+                    <option>Osanda</option>
+                    <option>Tharushi</option>
+                    <option>Haalah</option>
+                    <option>Shehan</option>
+                    <option>Prabudhdha</option>
+                    <option value="add-new">+ Add new name</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="ideaInput">Your Idea</label>
+                <textarea id="ideaInput" placeholder="Describe your study planner idea or any other suggestion..." rows="3"></textarea>
+            </div>
+
+            <div class="button-row">
+                <button id="addIdeaBtn">Post Idea</button>
+                <button id="resetBtn" class="secondary">Reset</button>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div id="ideaCount" class="idea-count">0 IDEAS</div>
+        </div>
+
+        <div class="ideas-panel" id="ideasPanel">
+            <!-- ideas will appear here -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2026 IdeaFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
