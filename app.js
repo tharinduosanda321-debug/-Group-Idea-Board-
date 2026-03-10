@@ -124,4 +124,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+
+    // close menu when link clicked (useful on mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+
+    // theme toggle / dark mode
+    const themeToggle = document.getElementById('themeToggle');
+    function updateThemeIcon() {
+        themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark') document.body.classList.add('dark');
+    updateThemeIcon();
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeIcon();
+    });
 });
