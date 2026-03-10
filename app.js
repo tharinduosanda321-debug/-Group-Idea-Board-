@@ -152,4 +152,36 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
         updateThemeIcon();
     });
+
+    // Pomodoro timer link
+    const pomodoroLink = document.getElementById('pomodoroLink');
+    pomodoroLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'pomodoro.html';
+    });
+
+    // Ideas link
+    const ideasLink = document.getElementById('ideasLink');
+    ideasLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'index.html';
+    });
+
+    // GPA Calculator link
+    const gpaLink = document.getElementById('gpaLink');
+    if (gpaLink) {
+        gpaLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'gpa-calculator.html';
+        });
+    }
+
+    // Home link
+    const homeLink = document.getElementById('homeLink');
+    if (homeLink) {
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        });
+    }
 });
