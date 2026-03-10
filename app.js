@@ -152,4 +152,18 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
         updateThemeIcon();
     });
+
+    // Pomodoro timer link
+    const pomodoroLink = document.getElementById('pomodoroLink');
+    pomodoroLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'pomodoro.html';
+    });
+
+    // Ideas link
+    const ideasLink = document.getElementById('ideasLink');
+    ideasLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'index.html';
+    });
 });
