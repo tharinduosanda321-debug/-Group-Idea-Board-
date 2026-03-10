@@ -166,4 +166,22 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         window.location.href = 'index.html';
     });
+
+    // GPA Calculator link
+    const gpaLink = document.getElementById('gpaLink');
+    if (gpaLink) {
+        gpaLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'gpa-calculator.html';
+        });
+    }
+
+    // Home link
+    const homeLink = document.getElementById('homeLink');
+    if (homeLink) {
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        });
+    }
 });
