@@ -24,6 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // enforce word limit (350 words maximum)
+        const wordCount = idea.trim().split(/\s+/).filter(w => w).length;
+        if (wordCount > 350) {
+            alert(`Your idea is too long (${wordCount} words). Please limit ideas to 350 words or fewer.`);
+            ideaInput.focus();
+            return;
+        }
+
         addIdea(name, idea);
         
         // Clear input and refocus
@@ -41,6 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function addIdea(name, idea) {
+        // prevent duplicates: check existing ideas (case-insensitive)
+        const existing = Array.from(ideasPanel.querySelectorAll('.idea-text'))
+            .map(el => el.textContent.trim().toLowerCase());
+        if (existing.includes(idea.toLowerCase())) {
+            alert('That idea has already been posted. Please share something new.');
+            ideaInput.focus();
+            return;
+        }
+
         // Remove empty state if it exists
         const emptyState = ideasPanel.querySelector('.empty-state');
         if (emptyState) {
