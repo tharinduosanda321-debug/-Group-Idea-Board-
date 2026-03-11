@@ -3,80 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IdeaFlow | Group Idea Board</title>
+    <title>IdeaFlow | Modern Productivity Workspace</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">IdeaFlow</a>
+            <a href="index.html" class="nav-logo">IdeaFlow<span>.</span></a>
             <div class="nav-hamburger" id="navToggle">&#9776;</div>
             <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="#" class="nav-link" id="homeLink">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" id="gpaLink">GPA Calculator</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" id="ideasLink">Ideas</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" id="pomodoroLink">Pomodoro Study Timer</a></li>
-                <li class="nav-item"><button class="nav-link theme-toggle" id="themeToggle">🌙</button></li>
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="gpa-calculator.html" class="nav-link">GPA Calculator</a></li>
+                <li class="nav-item"><a href="pomodoro.html" class="nav-link">Pomodoro</a></li>
+                <li class="nav-item"><button class="theme-toggle" id="themeToggle">🌙</button></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container">
-        <header class="header">
-            <div class="logo-wrapper">
-                <div class="logo">💡</div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">Version 2.0 is live</div>
+                <h1>Your Workspace for <span class="gradient-text">Brilliant Ideas.</span></h1>
+                <p>Collaborate, calculate, and focus. All your essential study tools in one beautifully designed workspace.</p>
+                <div class="hero-actions">
+                    <a href="#board" class="btn btn-primary">Start Collaborating</a>
+                    <a href="pomodoro.html" class="btn btn-secondary">Try Pomodoro</a>
+                </div>
             </div>
-            <h1>IdeaFlow</h1>
-        </header>
-
-        <div class="input-section">
-            <div class="form-group">
-                <label for="participantSelect">Contributor</label>
-                <select id="participantSelect">
-                    <option value="" disabled selected>Select your name...</option>
-                    <option>Indumini</option>
-                    <option>Nilakshana</option>
-                    <option>Osanda</option>
-                    <option>Tharushi</option>
-                    <option>Haalah</option>
-                    <option>Shehan</option>
-                    <option>Prabudhdha</option>
-                    <option value="add-new">+ Add new name</option>
-                </select>
+            <div class="hero-visual">
+                <div class="floating-card c1">💡</div>
+                <div class="floating-card c2">📈</div>
+                <div class="floating-card c3">⏱️</div>
             </div>
-            
-            <div class="form-group">
-                <label for="ideaInput">Your Idea</label>
-                <textarea id="ideaInput" placeholder="Describe your study planner idea or any other suggestion..." rows="3"></textarea>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="features">
+            <div class="section-header">
+                <h2>Productivity Suite</h2>
+                <p>Everything you need to stay ahead of your studies.</p>
             </div>
-
-            <div class="button-row">
-                <button id="addIdeaBtn">Post Idea</button>
-                <button id="resetBtn" class="secondary">Reset</button>
+            <div class="features-grid">
+                <a href="gpa-calculator.html" class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>GPA Calculator</h3>
+                    <p>Track your academic progress with precision and ease.</p>
+                    <span class="feature-link">Open Tool →</span>
+                </a>
+                <a href="pomodoro.html" class="feature-card">
+                    <div class="feature-icon">⏳</div>
+                    <h3>Pomodoro Timer</h3>
+                    <p>Master your focus with customizable study intervals.</p>
+                    <span class="feature-link">Open Tool →</span>
+                </a>
+                <a href="#board" class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Idea Board</h3>
+                    <p>Share thoughts and brainstorm with your team instantly.</p>
+                    <span class="feature-link">Scroll Down →</span>
+                </a>
             </div>
-        </div>
+        </section>
 
-        <div class="stats-bar">
-            <div id="ideaCount" class="idea-count">0 IDEAS</div>
-        </div>
+        <!-- Idea Board Section (Main Functionality) -->
+        <section id="board" class="board-section">
+            <div class="board-container">
+                <div class="board-header">
+                    <div class="board-title">
+                        <h2>Live Idea Board</h2>
+                        <div id="ideaCount" class="badge-count">0 IDEAS</div>
+                    </div>
+                    <p>Post your suggestions and collaborate with the team in real-time.</p>
+                </div>
 
-        <div class="ideas-panel" id="ideasPanel">
-            <!-- ideas will appear here -->
-        </div>
-    </div>
+                <div class="board-content">
+                    <div class="input-panel">
+                        <div class="form-group">
+                            <label for="participantSelect">Contributor</label>
+                            <div class="select-wrapper">
+                                <select id="participantSelect">
+                                    <option value="" disabled selected>Select your name...</option>
+                                    <option>Indumini</option>
+                                    <option>Nilakshana</option>
+                                    <option>Osanda</option>
+                                    <option>Tharushi</option>
+                                    <option>Haalah</option>
+                                    <option>Shehan</option>
+                                    <option>Prabudhdha</option>
+                                    <option value="add-new">+ Add new name</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ideaInput">Your Idea</label>
+                            <textarea id="ideaInput" placeholder="What's on your mind?..." rows="3"></textarea>
+                        </div>
+
+                        <div class="button-row">
+                            <button id="addIdeaBtn" class="btn btn-primary">Post Idea</button>
+                            <button id="resetBtn" class="btn btn-ghost">Clear</button>
+                        </div>
+                    </div>
+
+                    <div class="ideas-display">
+                        <div class="ideas-panel" id="ideasPanel">
+                            <!-- ideas will appear here -->
+                            <div class="empty-state">
+                                <div class="empty-icon">💭</div>
+                                <p>No ideas yet. Be the first to share something!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">About</a>
-                <a href="#">Privacy</a>
-                <a href="#">Contact</a>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">IdeaFlow<span>.</span></a>
+                <p>Empowering students to collaborate and excel.</p>
             </div>
-            <p>&copy; 2026 IdeaFlow. All rights reserved.</p>
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h4>Tools</h4>
+                    <a href="gpa-calculator.html">GPA Calculator</a>
+                    <a href="pomodoro.html">Pomodoro Timer</a>
+                </a>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IdeaFlow. Crafted for excellence.</p>
         </div>
     </footer>
 
